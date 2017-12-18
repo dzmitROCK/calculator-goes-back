@@ -72,20 +72,22 @@ class myTimer {
         return '0' + Number(num.toString());
     }
 }
-
+// создаем счётчик
 window.onload = function () {
+    // задаем параметры
     let timerArr = {
-        id: '#item',
-        days: 1,
-        hours: 5,
-        minutes: 15,
-        seconds: 30,
-        daysStr: ' дней ',
+        id: '#item', // в какой эллемент вставить
+        days: 1, // сколько дней осталось
+        hours: 5, // часов
+        minutes: 15, // минут
+        seconds: 3, // секунд
+        daysStr: ' дней ', // эти параметры после отображения цифр
         hoursStr: ' часов ',
         minutesStr: ' минут ',
         secondsStr: ' секунд '
     };
-
+    // создаём счетчик
     let ticktack = new myTimer(timerArr);
-    ticktack.tickTack(1000);
+    // запускаем с указанием с какиой задержкой тикать. 1000 это 1 секунда
+    ticktack.tickTack(1000); //
 }
