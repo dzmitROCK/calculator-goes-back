@@ -86,8 +86,13 @@ window.onload = function () {
         minutesStr: ' минут ',
         secondsStr: ' секунд '
     };
-    // создаём счетчик
-    let ticktack = new myTimer(timerArr);
+
+    // создаём счетчик передав ему параметры
+    let MyCounter1 = new myTimer(timerArr);
+
     // запускаем с указанием с какиой задержкой тикать. 1000 это 1 секунда
-    ticktack.tickTack(1000); //
+    MyCounter1.tickTack(1000); //
+
+
+//    далее можно создать еще счетчики
 }
