@@ -23,8 +23,8 @@ class myTimer {
 
     tickTack(timer) {
         setInterval(() => {
+
             this.oneTick();
-            // console.log(this.intervalId)
             this.seconds--;
 
         }, timer)
@@ -32,7 +32,7 @@ class myTimer {
 
     oneTick() {
 
-        //seconds
+        // seconds
         if (this.seconds < 0) {
             this.seconds = 59;
             this.minutes--;
@@ -40,7 +40,7 @@ class myTimer {
             this.seconds = this.toStrNum(this.seconds);
         }
 
-        //minutes
+        // minutes
         if (this.minutes < 0) {
             this.minutes = 59;
             this.hours--;
@@ -48,7 +48,7 @@ class myTimer {
             this.minutes = this.toStrNum(this.minutes);
         }
 
-        //hours
+        // hours
         if (this.hours < 0) {
             this.hours = 23;
             this.days--;
@@ -56,7 +56,7 @@ class myTimer {
             this.hours = this.toStrNum(this.hours);
         }
 
-        //days
+        // days
         if (this.days < 0) {
             console.log(this + ' stoped');
         } else {
@@ -71,28 +71,4 @@ class myTimer {
     toStrNum(num) {
         return '0' + Number(num.toString());
     }
-}
-// создаем счётчик
-window.onload = function () {
-    // задаем параметры
-    let timerArr = {
-        id: '#item', // в какой эллемент вставить
-        days: 1, // сколько дней осталось
-        hours: 0, // часов
-        minutes: 0, // минут
-        seconds: 3, // секунд
-        daysStr: ' дней ', // эти параметры после отображения цифр
-        hoursStr: ' часов ',
-        minutesStr: ' минут ',
-        secondsStr: ' секунд '
-    };
-
-    // создаём счетчик передав ему параметры
-    let MyCounter1 = new myTimer(timerArr);
-
-    // запускаем с указанием с какиой задержкой тикать. 1000 это 1 секунда
-    MyCounter1.tickTack(1000); //
-
-
-//    далее можно создать еще счетчики
 }
