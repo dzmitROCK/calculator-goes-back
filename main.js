@@ -78,8 +78,8 @@ window.onload = function () {
     let timerArr = {
         id: '#item', // в какой эллемент вставить
         days: 1, // сколько дней осталось
-        hours: 5, // часов
-        minutes: 15, // минут
+        hours: 0, // часов
+        minutes: 0, // минут
         seconds: 3, // секунд
         daysStr: ' дней ', // эти параметры после отображения цифр
         hoursStr: ' часов ',
