@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
     <title>My counter</title>
 </head>
@@ -73,14 +72,18 @@
         // задаем параметры
         let timerArr = {
             id: '#item', // в какой эллемент вставить
-            days: 1, // сколько дней осталось
+            days: 0, // сколько дней осталось
             hours: 0, // часов
             minutes: 0, // минут
-            seconds: 3, // секунд
+            seconds: 5, // секунд
             daysStr: ' дней ', // эти параметры после отображения цифр
             hoursStr: ' часов ',
             minutesStr: ' минут ',
-            secondsStr: ' секунд '
+            secondsStr: ' секунд ',
+            callback: function () { // функция выполнится после окончания счетчика
+                var timerBlock = document.querySelector('#item');
+                timerBlock.innerHTML = 'Акция закончилась'
+            }
         };
 
         // создаём объект счетчика передав ему параметры.
